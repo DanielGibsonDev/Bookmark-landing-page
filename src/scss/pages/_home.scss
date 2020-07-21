@@ -1,0 +1,485 @@
+// Key Elements
+html {
+  font-size: 12px;
+}
+
+body {
+  padding: 0;
+  font: {
+    family: 'Public Sans', sans-serif;
+    family: 'Rubik', sans-serif;
+    size: 1.3rem;
+    weight: 300;
+  }
+  line-height: 1.625;
+  background: $white;
+  color: $grayish-blue;
+  overflow-x: hidden;
+
+  @include screen-md {
+    font-size: 1.6rem;
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.screen-reader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  border: 0;
+  padding: 0;
+}
+
+.container {
+  width: calc(100% - 65px);
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  &__col {
+    text-align: center;
+  }
+}
+
+.logo {
+  &__img {
+    fill: $white;
+    height: 25px;
+    width: 148px;
+    margin: 0 auto;
+
+    &--blue {
+      fill: $logo-blue;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.heading {
+  font-weight: 500;
+  color: $very-dark-blue;
+  line-height: 1.2;
+
+  &_h1 {
+    font-size: 2.7rem;
+
+    @include screen-md {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+
+  &_h2 {
+    font-size: 2rem;
+    font-weight: 400;
+
+    @include screen-md {
+      font-size: 3rem;
+    }
+  }
+
+  &_h3 {
+    font-size: 2rem;
+  }
+
+  &_h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+// End Key Elements
+
+// Section classes
+// *** Intro ***
+.intro {
+  position: relative;
+  padding-bottom: 5.7rem;
+  z-index: 0;
+  text-align: center;
+
+  @include screen-md {
+    @include flexbox-row (center);
+    flex-direction: row-reverse;
+    padding-bottom: 0;
+  }
+
+  &__container {
+    padding-top: 3rem;
+
+    @include screen-md {
+      text-align: left;
+      max-width: 500px;
+      margin-right: 54px;
+      padding: 0 0 7rem 32px;
+    }
+  }
+
+  &__background {
+    text-align: center;
+    position: relative;
+
+    @include screen-lg {
+      width: 50%;
+    }
+
+    &:after {
+      background-color: $soft-blue;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 23%;
+      width: 80%;
+      height: 80%;
+      border-bottom-left-radius: 100px;
+      z-index: -1;
+      max-height: 352px;
+    }
+  }
+
+  &__hero-img {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: calc(100% - 30px);
+    max-width: 660px;
+
+    @include screen-lg {
+      width: 100%;
+      padding-left: 20px;
+      margin: 0;
+    }
+  }
+
+  &__text {
+    padding-bottom: 1.5rem;
+
+    @include screen-sm {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include screen-md {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      max-width: 100%;
+    }
+  }
+}
+
+// *** Features ***
+.features {
+  padding-top: 5.7rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  &__heading-text {
+    max-width: 560px;
+    margin: auto;
+  }
+
+  &__text {
+    padding-bottom: 2rem;  
+  }
+}
+
+.feature-tabs {
+  &__container {
+    max-width: 500px;
+    text-align: center;
+    padding-top: 5rem;
+
+    @include screen-md {
+      padding-top: 0;
+      text-align: left;
+      margin-left: 54px;
+      padding: 0 32px 2rem 0;
+    }
+    
+    .button {
+      display: none;
+
+      @include screen-md {
+        display: inline-flex;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  &__img-container {
+    position: relative;
+
+    @include screen-md {
+      width: 50%;  
+    }
+
+    &:after {
+      background-color: $soft-blue;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 18%;
+      width: 80%;
+      height: 100%;
+      border-bottom-right-radius: 100px;
+      z-index: -1;
+      max-height: 352px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: calc(100% - 65px);
+    max-width: 536px;
+
+    @include screen-md {
+      margin: 0 6rem 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__buttons-container {
+    padding-bottom: 6rem;
+
+    @include screen-md {
+      @include flexbox-row(center);
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+  }
+
+  &__button {
+    border: 0;
+    background-color: $white;
+    border-top: 1px solid $light-grayish-blue;
+    width: 100%;
+    padding: 1.6rem 0;
+    font-size: 1.4rem;
+    color: $grayish-blue;
+    font-weight: 300;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: 0.25s;
+
+    @include screen-md {
+      border-top: 0;
+      border-bottom: 1px solid $light-grayish-blue;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $light-grayish-blue;
+    }
+
+    &:hover {
+      color: $soft-red;
+    }
+
+    &:active, .tab-active {
+      color: $very-dark-blue;
+
+      &:after {
+        content: '';
+        width: 50%;
+        height: 4px;
+        background-color: $soft-red;
+        position: absolute;
+        left: 25%;
+        bottom: -1px;
+        z-index: 1;
+
+        @include screen-md {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__bookmarking
+  // &__searching, &__sharing 
+  {
+    text-align: center;
+    position: relative;
+
+    @include screen-md {
+      @include flexbox-row(center);
+    }
+  }
+  
+}
+
+// *** Downloads ***
+.downloads {
+  text-align: center;
+  padding-top: 5rem;
+
+  &__cards {
+    max-width: 280px;
+    padding: 3.5rem 0 2rem;
+    margin: 3rem auto;
+    border-radius: 1.3rem;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+  }
+
+  @include screen-md {
+    padding-top: 12rem;
+  }
+
+  &__text {
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+
+  &__card-container {
+    @include screen-md {
+      @include flexbox-centered;
+      align-items: flex-start;
+    }
+  }
+
+  &__cards {
+    @include screen-md {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+
+      &:nth-child(2) {
+        margin-top: 6rem;
+      }
+
+      &:last-child {
+        margin-top: 9rem;
+      }
+    }  
+  }
+}
+
+.download-card {
+  &__img {
+    padding-bottom: 0.5rem;
+  }
+
+  .heading {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-top: 0.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .button {
+    margin-top: 2rem;
+  }
+}
+
+// *** FAQ ***
+.faqs {
+  text-align: center;
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+
+  &__text {
+    padding-bottom: 5rem;
+    max-width: 550px;
+    margin: auto;
+  }
+  
+  .button {
+    margin-top: 2rem;
+  }
+}
+
+.accordion {
+  max-width: 540px;
+  margin: auto;
+
+  &__question {
+    @include flexbox-row(left);
+    color: $very-dark-blue;
+    border-bottom: 1px solid $light-grayish-blue;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+
+    &--arrow {
+      margin: auto 0;
+    }
+
+    &:hover {
+      color: $soft-red;
+    }
+  }
+}
+
+// *** Signup ***
+.signup {
+  background-color: $soft-blue;
+  text-align: center;
+
+  .signup-container {
+    padding: 4rem 0;
+  }
+  
+  .heading {
+    color: $white;
+  }
+
+  .heading_h2 {
+    @include screen-md {
+      max-width: 500px;
+      margin: auto;
+      padding-bottom: 3rem;
+    }
+  }
+
+  .button {
+    cursor: pointer;
+
+    @include media(520px) {
+      max-width: 123px;
+      padding: 0;
+    }
+  }
+
+  &__input {
+    max-width: 300px;
+    width: 100%;
+    border: 0;
+    height: 42px;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    padding: 0 1.5rem;
+
+    &::placeholder {
+      opacity: 0.2;
+    }
+  }
+  
+  .button {
+    margin-left: 1rem;
+  }
+}
+

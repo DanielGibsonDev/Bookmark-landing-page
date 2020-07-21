@@ -1,0 +1,85 @@
+.faq-test {
+  display: none;
+}
+.footer {
+  background-color: $very-dark-blue;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  padding-top: 4rem;
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0 0 0;
+
+    &__item {
+      @include screen-md {
+        margin-right: 40px;
+      }
+    }
+
+    &__link {
+      color: $white;
+      line-height: 3.8rem;
+
+      font-weight: 300;
+      letter-spacing: 2.6px;
+      color: $white;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $soft-red;
+      }
+    }
+
+    @include screen-md {
+      padding-top: 0;
+    }
+  }
+
+  &__container, &__nav {
+    @include screen-md {
+      @include flexbox-row(center);
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+
+    @include screen-md {
+      margin-right: 5rem;
+    }
+  }
+
+  .attribution { 
+    background-color: $very-dark-blue;
+    font-size: 11px; text-align: center; 
+    margin-top: 6rem;
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
+
+.socials {
+  @include flexbox-centered;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+
+  @include screen-md {
+    margin: 0;
+  }
+
+  &__link {
+    fill: $white;
+
+    &:first-child {
+      margin-right: 3.5rem;
+    }
+
+    &:hover {
+      fill: $soft-red;
+    }
+  }
+}

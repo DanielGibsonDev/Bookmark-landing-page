@@ -1,0 +1,39 @@
+.header {
+  padding: 4rem 0 5rem;
+  position: relative;
+  z-index: 1;
+  background: $white;
+
+  @include screen-md {
+    padding-bottom: 9rem;
+  }
+
+  .logo {
+    &__img--blue {
+      height: 25px;
+      width: 148px;
+    }
+  }
+
+  &__container {
+    @include flexbox-row(center);
+  }
+
+  &__mobile-button {
+    border: 0;
+    background: 0;
+    width: 2.5rem;
+    height: 2rem;
+    padding: 0;
+    cursor: pointer;
+
+    @include screen-md {
+      display: none;
+    }
+  }
+
+  &__menu-icon {
+    width: 18px;
+    height: 16px;
+  }
+}

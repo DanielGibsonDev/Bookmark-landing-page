@@ -1,0 +1,68 @@
+// CTA button
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  background-color: $soft-blue;
+  color: $white;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0 0.8rem;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+  border: 2px solid transparent; 
+
+  @include screen-md {
+    padding: 0 2.4rem;
+    font-size: 1.5rem;
+  }
+
+  &--white {
+    color: $very-dark-blue;
+    background-color: $light-grayish-blue;
+
+    &:hover {
+      background-color: $white;
+      border: 2px solid $very-dark-blue;
+    }
+  }
+
+  &--blue {
+    &:hover {
+      background-color: $white;
+      border: 2px solid $soft-blue;
+      color: $soft-blue
+    }
+  }
+
+  &--red {
+    background-color: $soft-red;
+
+    &:hover {
+      background-color: $white;
+      color: $soft-red;
+      border: 2px solid $soft-red;
+    }
+  }
+
+  &--opacity {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &--small {
+    padding: 0 2.5rem;
+  }
+
+  &--medium {
+    padding: 0 1.6rem;
+  }
+
+  &--large {
+    width: 100%;
+  }
+}
