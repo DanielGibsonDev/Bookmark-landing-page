@@ -1,3 +1,21 @@
+# Bookmark landing page
+This project is my solution to an intermediate level [Frontend Mentor](https://www.frontendmentor.io) challenge which aims to practice and improve my frontend skills.
+
+Build using Mobile first stlying, BEM naming convention, SCSS, CSS flexbox, JavaScript, and Gulp.js toolkit as a build tool.
+
+--> [Link to live Page](https://manage-landing.now.sh)
+
+## Site Setup
+Clone the repository and run `npm install` to install the dependencies.
+
+### Available Scripts
+`npm start` - serves the project on *localhost:3000*.
+`npm run build` - builds the project for production
+
+Build folder */build*
+
+
+
 # Frontend Mentor - Bookmark landing page
 
 ![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
