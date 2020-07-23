@@ -1,4 +1,5 @@
 # Bookmark landing page
+
 This project is my solution to an intermediate level [Frontend Mentor](https://www.frontendmentor.io) challenge which aims to practice and improve my frontend skills.
 
 Build using Mobile first stlying, BEM naming convention, SCSS, CSS flexbox, JavaScript, and Gulp.js toolkit as a build tool.
@@ -6,17 +7,16 @@ Build using Mobile first stlying, BEM naming convention, SCSS, CSS flexbox, Java
 --> [Link to live Page](https://manage-landing.now.sh)
 
 ## Site Setup
+
 Clone the repository and run `npm install` to install the dependencies.
 
 ### Available Scripts
+
 `npm start` - serves the project on *localhost:3000*.
+
 `npm run build` - builds the project for production
 
-Build folder */build*
-
-
-
-# Frontend Mentor - Bookmark landing page
+## Frontend Mentor - Bookmark landing page
 
 ![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
 
@@ -51,7 +51,7 @@ Want some support on the challenge? [Join our Slack community](https://beta.fron
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to. 
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to.
 
 The designs are in JPG static format. This will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. This should help train your eye to perceive differences in spacings and sizes.
 

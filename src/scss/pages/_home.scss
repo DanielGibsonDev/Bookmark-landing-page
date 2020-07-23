@@ -63,7 +63,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .heading {
@@ -259,12 +259,13 @@ body {
 
   &__buttons-container {
     padding-bottom: 6rem;
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
 
     @include screen-md {
       @include flexbox-row(center);
-      text-align: center;
-      max-width: 700px;
-      margin: auto;
+      
     }
   }
 
@@ -295,7 +296,7 @@ body {
       color: $soft-red;
     }
 
-    &:active, .tab-active {
+    &.active-link {
       color: $very-dark-blue;
 
       &:after {
@@ -316,14 +317,47 @@ body {
     }
   }
 
-  &__bookmarking
-  // &__searching, &__sharing 
-  {
+  &__bookmarking, &__searching, &__sharing {
     text-align: center;
     position: relative;
 
     @include screen-md {
       @include flexbox-row(center);
+    }
+  }
+
+  &__searching {
+    .feature-tabs__img-container:after {
+      border-top-right-radius: 200px;
+      height: 90%;
+      width: 70%;
+      @include screen-md {
+        width: 80%;
+      }
+    }
+
+    .feature-tabs__img {
+      max-width: 480px;
+      @include screen-md {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__sharing {
+    .feature-tabs__img-container:after {
+      border-top-right-radius: 200px;
+      width: 67%;
+      @include screen-md {
+        width: 80%;
+      }
+    }
+
+    .feature-tabs__img {
+      max-width: 440px;
+      @include screen-md {
+        margin-right: 3rem;
+      }
     }
   }
   
@@ -417,20 +451,37 @@ body {
   max-width: 540px;
   margin: auto;
 
+  &__question-answer {
+    border-bottom: 1px solid $light-grayish-blue;
+    margin-bottom: 1.5rem;
+  }
+
   &__question {
     @include flexbox-row(left);
     color: $very-dark-blue;
-    border-bottom: 1px solid $light-grayish-blue;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    cursor: pointer;
 
     &--arrow {
       margin: auto 0;
+      stroke: $soft-blue;
+    }
+
+    .active-arrow {
+      stroke: $soft-red !important;
+      transform: rotate(180deg);
     }
 
     &:hover {
       color: $soft-red;
     }
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: left;
   }
 }
 
@@ -457,29 +508,98 @@ body {
 
   .button {
     cursor: pointer;
+    margin-top: 1rem;
+    max-width: 300px;
 
-    @include media(520px) {
+    @include screen-md {
       max-width: 123px;
       padding: 0;
+      margin-left: 1rem;
+      margin-top: 0;
     }
   }
 
+  &__form {
+    @include screen-md {
+      @include flexbox-centered;
+    }
+  }
+
+  &__input-container {
+    position: relative;
+  }
+
   &__input {
-    max-width: 300px;
-    width: 100%;
+    width: 300px;
     border: 0;
     height: 42px;
-    margin-bottom: 1rem;
     border-radius: 0.5rem;
     padding: 0 1.5rem;
+    font-size: 1.4rem;
 
     &::placeholder {
       opacity: 0.2;
     }
   }
-  
-  .button {
-    margin-left: 1rem;
+
+  .button-error {
+    margin-bottom: 1.9rem;
+  }
+
+  .input-error {
+    border: 2px solid $soft-red;
+    border-bottom: 23px solid $soft-red;
+    height: 65px;
+  }
+
+  &__validation {
+    color: $white;
+    font-size: 1rem;
+    font-style: italic;
+    position: absolute;
+    left: calc(50% - 11.5rem);
+    bottom: 0.3rem;
+    margin: 0;
+  }
+
+  &__validation-2 {
+    position: absolute;
+    left: calc(50% + 10rem);
+    top: 1.1rem;
+    color: $white;
+    background-color: $soft-red;
+    border-radius: 50rem;
+    border: 5px solid $soft-red;
+    line-height: 0.6;
+    padding: 0 0.2rem;
+    font-weight: 400;
+    font-size: 1rem;
   }
 }
 
+/* Github link */
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
