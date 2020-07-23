@@ -4,7 +4,7 @@ This project is my solution to an intermediate level [Frontend Mentor](https://w
 
 Build using Mobile first stlying, BEM naming convention, SCSS, CSS flexbox, JavaScript, and Gulp.js toolkit as a build tool.
 
---> [Link to live Page](https://manage-landing.now.sh)
+--> [Link to live Page](https://bookmark-landing-daniel.netlify.app/)
 
 ## Site Setup
 
@@ -18,7 +18,7 @@ Clone the repository and run `npm install` to install the dependencies.
 
 ## Frontend Mentor - Bookmark landing page
 
-![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Bookmark landing page coding challenge](./src/design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
