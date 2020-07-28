@@ -58,7 +58,7 @@ function htmlTask() {
       removeComments: true
     })))
     .pipe(glp.if(production, glp.replace('.css', '.min.css')))
-    .pipe(glp.if(production, glp.replace('scripts.js', 'scripts.min.js')))
+    .pipe(glp.if(production, glp.replace('main.js', 'main.min.js')))
     .pipe(dest(paths.html.dest))
     .pipe(browserSync.stream());
 }
