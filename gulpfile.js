@@ -82,11 +82,11 @@ function jsTask() {
     .on('end', browserSync.reload);
 }
 
-function jsLibsTask() {
-  return src()
-  .pipe(gp.concat('vendor.min.js'))
-  .pipe(dest(paths.js.dest));
-}
+// function jsLibsTask() {
+//   return src()
+//   .pipe(gp.concat('vendor.min.js'))
+//   .pipe(dest(paths.js.dest));
+// }
 
 
 // CSS processing
@@ -136,7 +136,7 @@ function syncTask() {
 
 exports.default = series(clean,
   parallel(
-    htmlTask, scssTask, jsLibsTask, jsTask, imagesTask
+    htmlTask, scssTask, jsTask, imagesTask
   ),
   parallel(watchTask, syncTask)
 );
@@ -144,6 +144,6 @@ exports.default = series(clean,
 
 exports.prod = series(clean,
   series(
-    htmlTask, scssTask, jsLibsTask, jsTask, imagesTask
+    htmlTask, scssTask, jsTask, imagesTask
   )
 );
